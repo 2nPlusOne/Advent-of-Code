@@ -7,17 +7,19 @@ def process_input(inputFile: str) -> int:
 
     for instruction in instructions: instruction[1] = int(instruction[1])
 
-    horizontal_distance = 0 # Increments with "forward"
-    depth = 0 # Increments with "down", decrements with "up"
+    horizontal_distance = 0
+    depth = 0
+    aim = 0
     for instruction in instructions:
         value = instruction[1]
         match instruction[0]:
             case "up":
-                depth -= value
+                aim -= value
             case "down":
-                depth += value
+                aim += value
             case "forward":
                 horizontal_distance += value
+                depth += aim * value
     return depth * horizontal_distance
 
 if __name__ == "__main__":
