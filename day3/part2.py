@@ -31,9 +31,9 @@ def most_common(l: list) -> str:
 
 def least_common(l: list) -> str:
     l = [int(n) for n in l]
-    if sum(l) // len(l) <= 0.5:
-        return '0'
-    else: return '1'
+    if (sum(l) // len(l)) < 0.5:
+        return '1'
+    else: return '0'
 
 if __name__ == "__main__":
     inputFile = os.path.join(os.path.dirname(__file__), 'input.txt')
