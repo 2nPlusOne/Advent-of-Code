@@ -32,7 +32,7 @@
 <p>In this example, there are <em><code>7</code></em> measurements that are larger than the previous measurement.</p>
 <p><em>How many measurements are larger than the previous measurement?</em></p>
 </article>
-<p>Your puzzle answer was <code>1292</code>.</p><article class="day-desc"><h2 id="part2">--- Part Two ---</h2><p>Considering every single measurement isn't as useful as you expected: there's just too much noise in the data.</p>
+<p>Your puzzle answer was <details><summary>Spoiler</summary><code>1292</code>.</details></p><article class="day-desc"><h2 id="part2">--- Part Two ---</h2><p>Considering every single measurement isn't as useful as you expected: there's just too much noise in the data.</p>
 <p>Instead, consider sums of a <em>three-measurement sliding window</em>.  Again considering the above example:</p>
 <pre><code>199  A      
 200  A B    
@@ -60,4 +60,4 @@ H: 792 (<em>increased</em>)
 <p>In this example, there are <em><code>5</code></em> sums that are larger than the previous sum.</p>
 <p>Consider sums of a three-measurement sliding window. <em>How many sums are larger than the previous sum?</em></p>
 </article>
-<p>Your puzzle answer was <code>1262</code>.
+<p>Your puzzle answer was <details><summary>Spoiler</summary><code>1262</code>.</details></p>

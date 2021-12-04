@@ -26,7 +26,7 @@ forward 2
 <p>After following these instructions, you would have a horizontal position of <code>15</code> and a depth of <code>10</code>. (Multiplying these together produces <code><em>150</em></code>.)</p>
 <p>Calculate the horizontal position and depth you would have after following the planned course. <em>What do you get if you multiply your final horizontal position by your final depth?</em></p>
 </article>
-<p>Your puzzle answer was <code>1882980</code>.</p><article class="day-desc"><h2 id="part2">--- Part Two ---</h2><p>Based on your calculations, the planned course doesn't seem to make any sense. You find the submarine manual and discover that the process is actually slightly more complicated.</p>
+<p>Your puzzle answer was <details><summary>Spoiler</summary><code>1882980</code>.</details></p><article class="day-desc"><h2 id="part2">--- Part Two ---</h2><p>Based on your calculations, the planned course doesn't seem to make any sense. You find the submarine manual and discover that the process is actually slightly more complicated.</p>
 <p>In addition to horizontal position and depth, you'll also need to track a third value, <em>aim</em>, which also starts at <code>0</code>. The commands also mean something entirely different than you first thought:</p>
 <ul>
 <li><code>down X</code> <em>increases</em> your aim by <code>X</code> units.</li>
@@ -49,4 +49,4 @@ forward 2
 <p>After following these new instructions, you would have a horizontal position of <code>15</code> and a depth of <code>60</code>. (Multiplying these produces <code><em>900</em></code>.)</p>
 <p>Using this new interpretation of the commands, calculate the horizontal position and depth you would have after following the planned course. <em>What do you get if you multiply your final horizontal position by your final depth?</em></p>
 </article>
-<p>Your puzzle answer was <code>1971232560</code>.
+<p>Your puzzle answer was <details><summary>Spoiler</summary><code>1971232560</code>.</details></p>
