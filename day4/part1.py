@@ -14,17 +14,17 @@ def main():
 
     # Test if input is processed correctly
     _draw_order = ''
-    for num in draw_order:
-        _draw_order += f"{num} "
-    print(f"\nDraw Order: {_draw_order}\n")
-
-    for board in boards:
-        _board = ''
-        for row in board:
-            for num in row:
-                _board += f"{num} "
-            _board += '\n'
-        print(_board)
+    for draw in draw_order:
+        print(f"\n\nDraw: {draw}")
+        for i, board in enumerate(boards):
+            _board = ''
+            for j, row in enumerate(board):
+                for k, col in enumerate(row):
+                    if col == draw:
+                        boards[i][j][k] = "X "
+                    _board += boards[i][j][k] + ' '
+                _board += '\n'
+            print(_board)
 
 if __name__ == "__main__":
     main()
