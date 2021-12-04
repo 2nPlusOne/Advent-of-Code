@@ -7,10 +7,6 @@ def process_input(inputFile: str) -> int:
         data = [line.strip() for line in f.readlines()]
     f.close()
 
-    a = '00001111'
-    print("most common ", most_common(a))
-    print("least common " ,least_common(a))
-
     O2_rating, CO2_rating = data, data
     for i in range(12):
         m = least_common([row[i] for row in O2_rating])
@@ -22,9 +18,6 @@ def process_input(inputFile: str) -> int:
         if len(CO2_rating) > 1:
             CO2_rating = [row for row in CO2_rating if l == row[i]]
         
-        #print(f"i: {i}")
-        #print("O2 Ratings: ", O2_rating)
-        #print("CO2 Ratings: ", CO2_rating)
     return int(O2_rating[0], base=2) * int(CO2_rating[0], base=2)
 
 def most_common(l: list) -> str:
