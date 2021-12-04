@@ -7,10 +7,14 @@ def process_input(inputFile: str) -> int:
         data = [line.strip() for line in f.readlines()]
     f.close()
 
+    a = '00001111'
+    print("most common ", most_common(a))
+    print("least common " ,least_common(a))
+
     O2_rating, CO2_rating = data, data
     for i in range(12):
-        m = most_common([row[i] for row in O2_rating])
-        l = least_common([row[i] for row in CO2_rating])
+        m = least_common([row[i] for row in O2_rating])
+        l = most_common([row[i] for row in CO2_rating])
 
         if len(O2_rating) > 1:
             O2_rating = [row for row in O2_rating if m == row[i]]
@@ -18,22 +22,22 @@ def process_input(inputFile: str) -> int:
         if len(CO2_rating) > 1:
             CO2_rating = [row for row in CO2_rating if l == row[i]]
         
-        print(f"i: {i}")
-        print("O2 Ratings: ", O2_rating)
-        print("CO2 Ratings: ", CO2_rating)
+        #print(f"i: {i}")
+        #print("O2 Ratings: ", O2_rating)
+        #print("CO2 Ratings: ", CO2_rating)
     return int(O2_rating[0], base=2) * int(CO2_rating[0], base=2)
 
 def most_common(l: list) -> str:
-    l = [int(n) for n in l]
-    if sum(l) // len(l) >= 0.5:
-        return '1'
-    else: return '0'
+    if l.count("1") >= l.count("0"):
+        return "1"
+    else:
+        return "0"
 
 def least_common(l: list) -> str:
-    l = [int(n) for n in l]
-    if (sum(l) // len(l)) < 0.5:
-        return '1'
-    else: return '0'
+    if l.count("1") < l.count("0"):
+        return "1"
+    else:
+        return "0"
 
 if __name__ == "__main__":
     inputFile = os.path.join(os.path.dirname(__file__), 'input.txt')
