@@ -52,4 +52,4 @@
 <p>You aren't sure how many bingo boards a giant squid could play at once, so rather than waste time counting its arms, the safe thing to do is to <em>figure out which board will win last</em> and choose that one. That way, no matter which boards it picks, it will win for sure.</p>
 <p>In the above example, the second board is the last to win, which happens after <code>13</code> is eventually called and its middle column is completely marked. If you were to keep playing until this point, the second board would have a sum of unmarked numbers equal to <code>148</code> for a final score of <code>148 * 13 = <em>1924</em></code>.</p>
 <p>Figure out which board will win last. <em>Once it wins, what would its final score be?</em></p>
-</article><details><summary>Spoiler</summary><p>Your puzzle answer was <code>no answer yet...</code>.</p></details>
+</article><details><summary>Spoiler</summary><p>Your puzzle answer was <code>16168.</code>.</p></details>
