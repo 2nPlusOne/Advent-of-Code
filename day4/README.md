@@ -46,4 +46,10 @@
 <p>At this point, the third board <em>wins</em> because it has at least one complete row or column of marked numbers (in this case, the entire top row is marked: <code><em>14 21 17 24  4</em></code>).</p>
 <p>The <em>score</em> of the winning board can now be calculated. Start by finding the <em>sum of all unmarked numbers</em> on that board; in this case, the sum is <code>188</code>. Then, multiply that sum by <em>the number that was just called</em> when the board won, <code>24</code>, to get the final score, <code>188 * 24 = <em>4512</em></code>.</p>
 <p>To guarantee victory against the giant squid, figure out which board will win first. <em>What will your final score be if you choose that board?</em></p>
+</article><details><summary>Spoiler</summary><p>Your puzzle answer was <code>22680</code>.</p></details>
+
+<article class="day-desc"><h2 id="part2">--- Part Two ---</h2><p>On the other hand, it might be wise to try a different strategy: <span title="That's 'cuz a submarine don't pull things' antennas out of their sockets when they lose. Giant squid are known to do that.">let the giant squid win</span>.</p>
+<p>You aren't sure how many bingo boards a giant squid could play at once, so rather than waste time counting its arms, the safe thing to do is to <em>figure out which board will win last</em> and choose that one. That way, no matter which boards it picks, it will win for sure.</p>
+<p>In the above example, the second board is the last to win, which happens after <code>13</code> is eventually called and its middle column is completely marked. If you were to keep playing until this point, the second board would have a sum of unmarked numbers equal to <code>148</code> for a final score of <code>148 * 13 = <em>1924</em></code>.</p>
+<p>Figure out which board will win last. <em>Once it wins, what would its final score be?</em></p>
 </article><details><summary>Spoiler</summary><p>Your puzzle answer was <code>no answer yet...</code>.</p></details>
