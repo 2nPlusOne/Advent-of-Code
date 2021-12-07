@@ -5,6 +5,7 @@ import os
 #       For each point on line, add 1 to that grid position.
 
 Line = tuple[int, int, int, int]
+Grid = list[list[int]]
 
 def main():
     with open(os.path.join(os.path.dirname(__file__), 'input.txt')) as f:
@@ -16,7 +17,7 @@ def main():
 
     print(f"\nPoints with at least two overlaps: {overlaps_over_threshold(grid, 2)}\n")
 
-def process_segment(segment):
+def process_segment(segment: str) -> Line:
     """Return a tuple with starting and ending coordinates of line segment."""
     segment = segment.split('->')
     segment = [segment[0].strip(), segment[1].strip()]
@@ -36,7 +37,7 @@ def delta_xy(line: Line):
         return dx, 0
     else: return dx, dy
 
-def mark_grid(grid, line: Line):
+def mark_grid(grid: Grid, line: Line):
     """Increment grid values for each coordinate in line segment."""
     dx, dy = delta_xy(line)
     x1, y1, x2, y2 = line
@@ -48,7 +49,7 @@ def mark_grid(grid, line: Line):
     grid[x1][y1] += 1
     return grid
 
-def overlaps_over_threshold(grid, threshold):
+def overlaps_over_threshold(grid: Grid, threshold: int) -> int:
     """Return the number of points with number of overlaps over threshold."""
     count = 0
     for x in range(len(grid)):

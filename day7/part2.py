@@ -6,9 +6,10 @@ def main():
 
     fuel_sum = 1000000000000000000000000
     pos = 0
-    average_pos = sum(positions) // len(positions)
-    # Best position will be close to the average position in the list
-    for i in range(average_pos - 1, average_pos + 2):
+    # Fuel consumption is optimized at the list's average position
+    average_pos = sum(positions) // len(positions) # Floor of average position
+    for i in range(average_pos, average_pos + 2): # Check position on either side of average
+        print(i)
         _fuel_sum = 0
         for j in range(len(positions)):
             _fuel_sum += sum_range(abs(i - positions[j]))
