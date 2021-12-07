@@ -6,14 +6,14 @@ def main():
 
     fuel_sum = 1000000000000000000000000
     pos = 0
-    average_pos = int(sum(positions) / len(positions))
+    average_pos = sum(positions) // len(positions)
     # Best position will be close to the average position in the list
-    for i in range(average_pos - 10, average_pos + 10):
-        _sum = 0
+    for i in range(average_pos - 1, average_pos + 2):
+        _fuel_sum = 0
         for j in range(len(positions)):
-            _sum += sum_range(abs(i - positions[j]))
-        if _sum < fuel_sum:
-            fuel_sum = _sum
+            _fuel_sum += sum_range(abs(i - positions[j]))
+        if _fuel_sum < fuel_sum:
+            fuel_sum = _fuel_sum
             pos = i
 
     print(f"Fuel required for position {pos}: {fuel_sum}")
