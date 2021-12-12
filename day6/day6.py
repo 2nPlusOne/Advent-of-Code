@@ -9,7 +9,7 @@ def main():
 
 def simulate_fish_growth(init_timers: list[int], num_days: int) -> int:
     timer_counts = [0] * 7 # Each index is a possible timer value
-    for state in init_timers: # Initialize the timer counts
+    for state in init_timers: # Fill the timer counts with the initial values
         timer_counts[state] += 1
 
     # Convert timer counts to a deque
