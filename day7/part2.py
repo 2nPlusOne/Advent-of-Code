@@ -3,6 +3,7 @@ import os
 def main():
     with open(os.path.join(os.path.dirname(__file__), 'input.txt'), 'r') as f:
         positions = [int(num) for num in f.read().split(',')]
+    f.close()
 
     fuel_sum = 1000000000000000000000000
     pos = 0

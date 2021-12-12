@@ -4,8 +4,10 @@ from collections import deque
 def main():
     with open(os.path.join(os.path.dirname(__file__), 'input.txt')) as f:
         initial_fish_timers = [int(num) for num in f.read().split(',')]
-        print(f'Part 1: {simulate_fish_growth(initial_fish_timers, 80)}')
-        print(f'Part 2: {simulate_fish_growth(initial_fish_timers, 256)}')
+    f.close()
+    
+    print(f'Part 1: {simulate_fish_growth(initial_fish_timers, 80)}')
+    print(f'Part 2: {simulate_fish_growth(initial_fish_timers, 256)}')
 
 def simulate_fish_growth(init_timers: list[int], num_days: int) -> int:
     timer_counts = [0] * 7 # Each index is a possible timer value

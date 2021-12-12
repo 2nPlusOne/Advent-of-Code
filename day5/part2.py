@@ -10,6 +10,8 @@ Grid = list[list[int]]
 def main():
     with open(os.path.join(os.path.dirname(__file__), 'input.txt')) as f:
         line_segments = f.readlines()
+    f.close()
+
     grid = [[0 for x in range(1000)] for y in range(1000)]
     for line in line_segments:
         line = process_segment(line)

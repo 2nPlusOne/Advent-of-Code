@@ -3,6 +3,7 @@ import os, math
 def main():
     with open(os.path.join(os.path.dirname(__file__), 'input.txt'), 'r') as f:
         heightmap = f.read().splitlines()
+    f.close()
 
     low_points = get_low_points(heightmap)
     basins = get_basins(low_points, heightmap)

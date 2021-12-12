@@ -7,6 +7,8 @@ import os
 def main():
     with open(os.path.join(os.path.dirname(__file__), 'input.txt')) as f:
         line_segments = f.readlines()
+    f.close()
+    
     grid = [[0 for x in range(1000)] for y in range(1000)]
     for segment in line_segments:
         start_x, start_y, end_x, end_y = process_segment(segment)

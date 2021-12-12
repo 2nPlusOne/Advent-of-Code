@@ -4,6 +4,7 @@ from statistics import median
 def main():
     with open(os.path.join(os.path.dirname(__file__), 'input.txt'), 'r') as f:
         positions = [int(num) for num in f.read().split(',')]
+    f.close()
 
     # Fuel is optimized at the median position in list
     median_pos = int(median(positions))

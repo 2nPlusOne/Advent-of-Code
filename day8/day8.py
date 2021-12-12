@@ -12,18 +12,19 @@ import os
 def main():
     with open(os.path.join(os.path.dirname(__file__), 'sample.txt'), 'r') as f:
         input = [line.split("|") for line in f.readlines()]
-        #print(input)
-        input = [[part.split() for part in line] for line in input]
-        outputs = [line[1] for line in input]
+        f.close()
 
-        sum = 0
-        lengths = [2, 4, 3, 7]
+    input = [[part.split() for part in line] for line in input]
+    outputs = [line[1] for line in input]
 
-        for output in outputs:
-            for digit in output:
-                if len(digit) in lengths:
-                    sum += 1
-        print(f"Part 1: {sum}")
+    sum = 0
+    lengths = [2, 4, 3, 7]
+
+    for output in outputs:
+        for digit in output:
+            if len(digit) in lengths:
+                sum += 1
+    print(f"Part 1: {sum}")
 
 
 if __name__ == "__main__":

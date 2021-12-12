@@ -4,6 +4,7 @@ def main():
     input_file = os.path.join(os.path.dirname(__file__), 'input.txt')
     with open(input_file, 'r') as f:
         boards = f.read().split("\n\n")
+    f.close()
 
     draws = boards.pop(0).split(',')
     for i in range(len(boards)):
