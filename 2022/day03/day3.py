@@ -25,12 +25,12 @@ def part1(knapsacks):
     return sum(map(mapFunc, knapsacks))
 
 def part2(knapsacks):    
-    sum = 0
+    count = 0
     for i in range(0, len(knapsacks), 3):
         badge = set(knapsacks[i].items).intersection(knapsacks[i+1].items).intersection(knapsacks[i+2].items).pop()
-        sum += azPriority(badge) if ord(badge) > 90 else AZPriority(badge)
+        count += azPriority(badge) if ord(badge) > 90 else AZPriority(badge)
     
-    return sum
+    return count
 
 if __name__ == "__main__":
     filename = os.path.join(os.path.dirname(__file__), 'input.txt')
