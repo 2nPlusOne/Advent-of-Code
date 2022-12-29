@@ -13,7 +13,7 @@ def part2():
     pass
 
 if __name__ == "__main__":
-    filename = os.path.join(os.path.dirname(__file__), 'input.txt')
+    filename = os.path.join(os.path.dirname(__file__), 'test.txt')
     data = process_input(filename)
     print(f"Part 1: {part1()}")
     print(f"Part 2: {part2()}")
